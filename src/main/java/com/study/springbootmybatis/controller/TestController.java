@@ -34,7 +34,7 @@ public class TestController {
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     public TestEntity test(@PathVariable String id) {
         System.out.println("id:" + id);
-        ArrayList<String> strings = new ArrayList<>();
+//        ArrayList<String> strings = new ArrayList<>();
         return testService.getById(id);
     }
 
