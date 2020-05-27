@@ -26,7 +26,11 @@ public class TestController {
     @Autowired
     private DemoMapper demoMapper;
 
-
+    /**
+     * 测试运行
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     public TestEntity test(@PathVariable String id) {
         System.out.println("id:" + id);
@@ -34,7 +38,12 @@ public class TestController {
         return testService.getById(id);
     }
 
-
+    /**
+     * 测试分页插件
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
     @RequestMapping("/getUserList")
     public Map getUserList(Integer pageNum, Integer pageSize) {
         HashMap<String, Object> map = new HashMap<>();
