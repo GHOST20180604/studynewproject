@@ -28,7 +28,6 @@ public class TestController {
     private TestService testService;
     @Autowired
     private DemoService demoService;
-    @Autowired
     private DemoMapper demoMapper;
 
     /**
