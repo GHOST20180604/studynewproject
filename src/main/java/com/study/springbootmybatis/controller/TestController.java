@@ -7,6 +7,8 @@ import com.study.springbootmybatis.entity.Demo;
 import com.study.springbootmybatis.entity.TestEntity;
 import com.study.springbootmybatis.service.DemoService;
 import com.study.springbootmybatis.service.TestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,9 @@ import java.util.*;
 @RestController
 @RequestMapping("/test")
 public class TestController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Autowired
     private TestService testService;
@@ -35,7 +40,8 @@ public class TestController {
     public TestEntity test(@PathVariable String id) {
         System.out.println("id:" + id);
 //        ArrayList<String> strings = new ArrayList<>();
-        return testService.getById(id);
+        TestEntity byId = testService.getById(id);
+        return byId;
     }
 
     /**
