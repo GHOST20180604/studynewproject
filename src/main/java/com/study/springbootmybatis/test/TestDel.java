@@ -57,6 +57,10 @@ public class TestDel {
         CustomString abc2 = new CustomString("abc", 1);
         System.out.println(abc == abc2);
         System.out.println(abc.equals(abc2));
+        System.out.println(abc.equals(abc2));
+        System.out.println(abc.equals(abc2));
+        System.out.println(abc.equals(abc2));
+        System.out.println(abc.equals(abc2));
     }
 
     private static class CustomString implements Comparable<CustomString> {
